@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/bin/run",
+      "args": [
+        "-s",
+        "Essen",
+        "-e",
+        "Duisburg",
+        "-m",
+        "medium-petrol-car"
+      ],
+      "env": {
+        "ORS_TOKEN":"5b3ce3597851110001cf624827ebb7bc816f4f96a1bff962bcb8bb97"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug All Tests",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "/usr/bin/mocha",
+      "args": [
+        "--timeout",
+        "99999",
+        "${workspaceFolder}/test/**/*.test.js"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Active Test",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "/usr/bin/mocha",
+      "args": [
+        "--timeout",
+        "99999",
+        "${file}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "co2-calculator",
+  "description": "A simple co2 calculator",
+  "version": "0.0.1",
+  "author": "Ibrahim Varol",
+  "bin": {
+    "co2-calculator": "./bin/run"
+  },
+  "bugs": "https://github.com/iboware/co2-calculator/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.6",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-oclif": "^3.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/iboware/co2-calculator",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "co2-calculator"
+  },
+  "repository": "iboware/co2-calculator",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}

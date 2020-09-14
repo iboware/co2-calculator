@@ -1,0 +1,9 @@
+{
+  "extends": ["eslint:recommended", "oclif"],
+  "rules": {
+    "object-curly-spacing": "off",
+    "no-unused-vars": "off",
+    "camelcase":"off",
+    "no-console": "off"
+  }
+}
